@@ -1,0 +1,94 @@
+/*************************************/
+//           Input related
+/*************************************/
+
+crd: Read multiple variables at once
+-------------------------------------
+void read() {}
+
+template <class Arg, class... Rest>
+void read(Arg &arg, Rest &...rest) {
+  cin >> arg;
+  read(rest...);
+}
+$0
+.
+
+rd: read($1);
+
+cnw: Create a function which will input word and return it
+----------------------------------------------------------
+inline string nextWord() {
+  string str;
+  cin >> str;
+  return str;
+}
+$0
+.
+
+nw: string $1 = nextWord();
+
+cnl: Create a function which will input line and return it
+----------------------------------------------------------
+inline string nextLine() {
+  string str;
+  getline(cin, str);
+  cin.ignore(); // ignore the trailing new line char
+  return str;
+}
+$0
+.
+
+nl: string $1 = nextLine();
+
+cni: Create a function which will input int and return it
+----------------------------------------------------------
+inline int nextInt() {
+  int n;
+  cin >> n;
+  return n;
+}
+$0
+.
+
+ni: int $1 = nextInt();
+
+cnt: Create a function which will input int/char/double/string etc and return it
+--------------------------------------------------------------------------------
+template <typename T>
+inline T next() {
+  T n;
+  cin >> n;
+  return n;
+}
+$0
+.
+
+nt: ${1:int} $2 = next<${1:int}>();
+
+cna: Create a function which will input int array as vector and return it
+-------------------------------------------------------------------------
+inline vector<int> nextInts(int n = 0) {
+  if (n == 0) cin >> n;
+  vector<int> a(n);
+  rep(i, 0, n) cin >> a[i];
+  return a;
+}
+$0
+.
+
+na: vector<int> $1 = nextInts();
+
+cnat: Create a function which will input int/char/string/double etc array as vector and return it
+-------------------------------------------------------------------------
+template <typename T>
+inline vector<T> nextArray(int n = 0) {
+  if (n == 0) cin >> n;
+  vector<T> a(n);
+  rep(i, 0, n) cin >> a[i];
+  return a;
+}
+$0
+.
+
+nat: vector<${1:int}> $2 = nextArray<${1:int}>();

@@ -1,0 +1,22 @@
+/*************************************/
+//           Output related
+/*************************************/
+
+cpa: Create a function which will print vector
+----------------------------------------------
+inline void printArray(vector<${1:int}> n, string separator = \" \") {
+  if (n.size() == 0) return;
+  rep(i, 0, n.size() - 1) cout << n[i] << separator;
+  cout << n[n.size() - 1] << endl;
+}
+$0
+.
+
+pa: printArray($1);
+
+pv: cout << $1 << endl;
+pl: cout << \"$1\" << endl;
+yes: cout << \"YES\" << endl;
+no: cout << \"NO\" << endl;
+
+pf: printf(\"$1\", $2);

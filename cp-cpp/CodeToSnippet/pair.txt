@@ -1,0 +1,13 @@
+/***************************************/
+//         Variable Declaration
+/***************************************/
+pii: pair<int, int> $1;
+psi: pair<string, int> $1;
+pis: pair<int, string> $1;
+pss: pair<string, string> $1;
+
+ptt: pair of type1 and type2
+---------------------------
+pair<$1, $2> $3;
+$0
+.

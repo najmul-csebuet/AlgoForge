@@ -1,0 +1,14 @@
+/*************************************/
+//          IO class related
+/*************************************/
+
+nw: var $1 = io.next();
+ni: var $1 = io.nextInt();
+nt: var $1 = io.next<$2>();
+
+nl: var $1 = io.nextLine();
+
+na: var $1 = io.nextInts();
+nat: var $1 = io.nextItems<$2>();
+
+pr: io.print($1);

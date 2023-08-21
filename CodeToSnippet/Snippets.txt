@@ -1,0 +1,284 @@
+{
+	// Place your snippets for cpp here.
+
+    // Each snippet is defined under a snippet name and has a prefix, body and description.
+    // The prefix is what is used to trigger the snippet and the body will be expanded and inserted.
+
+    // Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+
+    // Placeholders with the same ids are connected.
+
+	// Example:
+
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+  
+	/*************************************/
+	//          function/method related
+	/*************************************/
+
+	"create void function": {
+		"prefix": "vf",
+		"body": [
+			"void $1($2) {",
+			"    $0",
+			"}",
+		],
+	},
+
+	"create return function": {
+		"prefix": "rf",
+		"body": [
+			"${1:int} $2($3) {",
+			"    $1 $4;",
+			"    $0",
+			"    return $4;",
+			"}",
+		],
+	},
+
+
+	/*************************************/
+	//          IO class related
+	/*************************************/
+
+	"var $1 = io.next();": {
+		"prefix": "nw",
+		"body": [
+			"var $1 = io.next();",
+			"$0",
+		],
+	},
+
+	"var $1 = io.nextInt();": {
+		"prefix": "ni",
+		"body": [
+			"var $1 = io.nextInt();",
+			"$0",
+		],
+	},
+
+	"var $1 = io.next<$2>();": {
+		"prefix": "nt",
+		"body": [
+			"var $1 = io.next<$2>();",
+			"$0",
+		],
+	},
+
+	"var $1 = io.nextLine();": {
+		"prefix": "nl",
+		"body": [
+			"var $1 = io.nextLine();",
+			"$0",
+		],
+	},
+
+	"var $1 = io.nextInts();": {
+		"prefix": "na",
+		"body": [
+			"var $1 = io.nextInts();",
+			"$0",
+		],
+	},
+
+	"var $1 = io.nextItems<$2>();": {
+		"prefix": "nat",
+		"body": [
+			"var $1 = io.nextItems<$2>();",
+			"$0",
+		],
+	},
+
+	"io.print($1);": {
+		"prefix": "pr",
+		"body": [
+			"io.print($1);",
+			"$0",
+		],
+	},
+
+
+	/***************************************/
+	//         New Leetcode CPP File
+	/***************************************/
+
+	"New Leetcode CPP File": {
+		"prefix": "lc",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"",
+			"#define var auto",
+			"#define str string",
+			"#define pb push_back",
+			"#define vi vector<int>",
+			"#define vvi vector<vi>",
+			"#define si set<int>",
+			"#define mii map<int, int>",
+			"#define umii unordered_map<int, int>",
+			"#define sz(v) ((int)((v).size()))",
+			"#define all(v) ((v).begin()), ((v).end())",
+			"#define rep(i, a, b) for (var i = (a); i < (b); ++i)",
+			"#define tr(c, a) for (var & a : c)",
+			"",
+			"class Solution {",
+			" public:",
+			"  int solve() {",
+			"    // solve here",
+			"    return 0;",
+			"  }",
+			"};",
+			"",
+			"void testCase1() {",
+			"  // var s = Solution();",
+			"}",
+			"",
+			"int main() {",
+			"  testCase1();",
+			"  return 0;",
+			"}",
+			"",
+		],
+	},
+
+
+	/*************************************/
+	//          Macro Related
+	/*************************************/
+
+	"repeat / loop helper": {
+		"prefix": "rep",
+		"body": [
+			"rep(${1:i}, ${2:0}, ${3:sz($4)}) {",
+			"    $0",
+			"}",
+		],
+	},
+
+	"traverse the iterator": {
+		"prefix": "tr",
+		"body": [
+			"tr($1, ${2:a}) {",
+			"    $0",
+			"}",
+		],
+	},
+
+	"reverse traverse the iterator": {
+		"prefix": "trr",
+		"body": [
+			"trr($1, ${2:a}) {",
+			"    $0",
+			"}",
+		],
+	},
+
+
+	/*************************************/
+	//          Map Related
+	/*************************************/
+
+	"map<int, int> $1;": {
+		"prefix": "mii",
+		"body": [
+			"map<int, int> $1;",
+			"$0",
+		],
+	},
+
+	"unordered_map<int, int> $1;": {
+		"prefix": "umii",
+		"body": [
+			"unordered_map<int, int> $1;",
+			"$0",
+		],
+	},
+
+
+	/*************************************/
+	//          STL Related
+	/*************************************/
+
+	"reverse(all($1));": {
+		"prefix": "rev",
+		"body": [
+			"reverse(all($1));",
+			"$0",
+		],
+	},
+
+	"reverse($1.begin(), $1.begin() + $2);": {
+		"prefix": "revk",
+		"body": [
+			"reverse($1.begin(), $1.begin() + $2);",
+			"$0",
+		],
+	},
+
+	"sort(all($1));": {
+		"prefix": "srt",
+		"body": [
+			"sort(all($1));",
+			"$0",
+		],
+	},
+
+	"sort($1.begin(), $1.begin() + $2);": {
+		"prefix": "srtk",
+		"body": [
+			"sort($1.begin(), $1.begin() + $2);",
+			"$0",
+		],
+	},
+
+
+	/*************************************/
+	//          Set Related
+	/*************************************/
+
+	"set<int> $1;": {
+		"prefix": "si",
+		"body": [
+			"set<int> $1;",
+			"$0",
+		],
+	},
+
+	"set<char> $1;": {
+		"prefix": "sc",
+		"body": [
+			"set<char> $1;",
+			"$0",
+		],
+	},
+
+
+	/*************************************/
+	//          Vector Related
+	/*************************************/
+
+	"vector<int> $1;": {
+		"prefix": "vi",
+		"body": [
+			"vector<int> $1;",
+			"$0",
+		],
+	},
+
+	"vector<vector<char>> $1;": {
+		"prefix": "vvc",
+		"body": [
+			"vector<vector<char>> $1;",
+			"$0",
+		],
+	},
+
+}

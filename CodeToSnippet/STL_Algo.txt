@@ -1,0 +1,9 @@
+/*************************************/
+//          STL Related
+/*************************************/
+
+rev: reverse(all($1));
+revk: reverse($1.begin(), $1.begin() + $2);
+
+srt: sort(all($1));
+srtk: sort($1.begin(), $1.begin() + $2);

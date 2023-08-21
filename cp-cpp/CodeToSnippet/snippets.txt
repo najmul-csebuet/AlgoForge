@@ -1,0 +1,818 @@
+{
+	// Place your snippets for cpp here.
+
+    // Each snippet is defined under a snippet name and has a prefix, body and description.
+    // The prefix is what is used to trigger the snippet and the body will be expanded and inserted.
+
+    // Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+
+    // Placeholders with the same ids are connected.
+
+	// Example:
+
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+  
+	/***************************************/
+	//         New LeetCode Cpp File
+	/***************************************/
+
+	"New LeetCode Cpp File": {
+		"prefix": "lc",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"",
+			"#define var auto",
+			"#define endl '\\n'",
+			"",
+			"#define sz(v) ((int)((v).size()))",
+			"#define all(v) ((v).begin()), ((v).end())",
+			"#define fill(v, c) memset(v, c, sizeof(v))",
+			"",
+			"#define rep(i, a, b) for (auto i = (a); i < (b); ++i)",
+			"",
+			"class Solution {",
+			"public:",
+			"  int solve() {",
+			"    return 0;",
+			"  }  ",
+			"};",
+			"",
+			"int main() {",
+			"  //var ans = Solution().solve();",
+			"  return 0;",
+			"}",
+			"",
+		],
+	},
+
+
+	/***************************************/
+	//         New Cpp File
+	/***************************************/
+
+	"new cpp file": {
+		"prefix": "nf",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"",
+			"#define var auto",
+			"#define endl '\\n'",
+			"",
+			"#define sz(v) ((int)((v).size()))",
+			"#define all(v) ((v).begin()), ((v).end())",
+			"#define fill(v, c) memset(v, c, sizeof(v))",
+			"",
+			"#define rep(i, a, b) for (auto i = (a); i < (b); ++i)",
+			"",
+			"class Solution {",
+			"public:",
+			"  int solve() {",
+			"    return 0;",
+			"  }  ",
+			"};",
+			"",
+			"int main() {",
+			"  ios_base::sync_with_stdio(false);",
+			"  cin.tie(0);",
+			"  int testCount = 1;",
+			"  // testCount = io.nextInt();",
+			"  while (testCount > 0) {",
+			"    var ans = Solution().solve();",
+			"    --testCount;",
+			"  }",
+			"  return 0;",
+			"}",
+			"",
+		],
+	},
+
+
+	/*************************************/
+	//          Oneline codes related
+	/*************************************/
+
+	"LLONG_MAX $0": {
+		"prefix": "inf",
+		"body": [
+			"LLONG_MAX $0",
+		],
+	},
+
+	"push_back($1);": {
+		"prefix": "pb",
+		"body": [
+			"push_back($1);",
+			"$0",
+		],
+	},
+
+	"emplace_back($1);": {
+		"prefix": "eb",
+		"body": [
+			"emplace_back($1);",
+			"$0",
+		],
+	},
+
+	"emplace($1);": {
+		"prefix": "em",
+		"body": [
+			"emplace($1);",
+			"$0",
+		],
+	},
+
+	"long long $1;": {
+		"prefix": "ll",
+		"body": [
+			"long long $1;",
+			"$0",
+		],
+	},
+
+	"make_tuple($1);": {
+		"prefix": "mt",
+		"body": [
+			"make_tuple($1);",
+			"$0",
+		],
+	},
+
+
+	/*************************************/
+	//          function/method related
+	/*************************************/
+
+	"create void function": {
+		"prefix": "vf",
+		"body": [
+			"void $1($2) {",
+			"    $0",
+			"}",
+		],
+	},
+
+	"create function with return": {
+		"prefix": "rf",
+		"body": [
+			"${1:int} $2($3) {",
+			"    $1 $4;",
+			"    $0",
+			"    return $4;",
+			"}",
+		],
+	},
+
+
+	/*************************************/
+	//           Input related
+	/*************************************/
+
+	"Read multiple variables at once": {
+		"prefix": "crd",
+		"body": [
+			"void read() {}",
+			"",
+			"template <class Arg, class... Rest>",
+			"void read(Arg &arg, Rest &...rest) {",
+			"  cin >> arg;",
+			"  read(rest...);",
+			"}",
+			"$0",
+		],
+	},
+
+	"read($1);": {
+		"prefix": "rd",
+		"body": [
+			"read($1);",
+			"$0",
+		],
+	},
+
+	"Create a function which will input word and return it": {
+		"prefix": "cnw",
+		"body": [
+			"inline string nextWord() {",
+			"  string str;",
+			"  cin >> str;",
+			"  return str;",
+			"}",
+			"$0",
+		],
+	},
+
+	"string $1 = nextWord();": {
+		"prefix": "nw",
+		"body": [
+			"string $1 = nextWord();",
+			"$0",
+		],
+	},
+
+	"Create a function which will input line and return it": {
+		"prefix": "cnl",
+		"body": [
+			"inline string nextLine() {",
+			"  string str;",
+			"  getline(cin, str);",
+			"  cin.ignore(); // ignore the trailing new line char",
+			"  return str;",
+			"}",
+			"$0",
+		],
+	},
+
+	"string $1 = nextLine();": {
+		"prefix": "nl",
+		"body": [
+			"string $1 = nextLine();",
+			"$0",
+		],
+	},
+
+	"Create a function which will input int and return it": {
+		"prefix": "cni",
+		"body": [
+			"inline int nextInt() {",
+			"  int n;",
+			"  cin >> n;",
+			"  return n;",
+			"}",
+			"$0",
+		],
+	},
+
+	"int $1 = nextInt();": {
+		"prefix": "ni",
+		"body": [
+			"int $1 = nextInt();",
+			"$0",
+		],
+	},
+
+	"Create a function which will input int/char/double/string etc and return it": {
+		"prefix": "cnt",
+		"body": [
+			"template <typename T>",
+			"inline T next() {",
+			"  T n;",
+			"  cin >> n;",
+			"  return n;",
+			"}",
+			"$0",
+		],
+	},
+
+	"${1:int} $2 = next<${1:int}>();": {
+		"prefix": "nt",
+		"body": [
+			"${1:int} $2 = next<${1:int}>();",
+			"$0",
+		],
+	},
+
+	"Create a function which will input int array as vector and return it": {
+		"prefix": "cna",
+		"body": [
+			"inline vector<int> nextInts(int n = 0) {",
+			"  if (n == 0) cin >> n;",
+			"  vector<int> a(n);",
+			"  rep(i, 0, n) cin >> a[i];",
+			"  return a;",
+			"}",
+			"$0",
+		],
+	},
+
+	"vector<int> $1 = nextInts();": {
+		"prefix": "na",
+		"body": [
+			"vector<int> $1 = nextInts();",
+			"$0",
+		],
+	},
+
+	"Create a function which will input int/char/string/double etc array as vector and return it": {
+		"prefix": "cnat",
+		"body": [
+			"template <typename T>",
+			"inline vector<T> nextArray(int n = 0) {",
+			"  if (n == 0) cin >> n;",
+			"  vector<T> a(n);",
+			"  rep(i, 0, n) cin >> a[i];",
+			"  return a;",
+			"}",
+			"$0",
+		],
+	},
+
+	"vector<${1:int}> $2 = nextArray<${1:int}>();": {
+		"prefix": "nat",
+		"body": [
+			"vector<${1:int}> $2 = nextArray<${1:int}>();",
+			"$0",
+		],
+	},
+
+
+	/*************************************/
+	//          Useful macro related
+	/*************************************/
+
+	"Useful debugging function to print some variables": {
+		"prefix": "cdb",
+		"body": [
+			"#define debugPrint(args...)                       \\",
+			"  {                                          \\",
+			"    string _s = #args;                       \\",
+			"    replace(_s.begin(), _s.end(), ',', ' '); \\",
+			"    stringstream _ss(_s);                    \\",
+			"    istream_iterator<string> _it(_ss);       \\",
+			"    err(_it, args);                          \\",
+			"  }",
+			"",
+			"void err(istream_iterator<string> it) {}",
+			"",
+			"template <typename T, typename... Args>",
+			"void err(istream_iterator<string> it, T a, Args... args) {",
+			"  cerr << *it << \" = \" << a << endl;",
+			"  err(++it, args...);",
+			"}",
+			"$0",
+		],
+	},
+
+	"debugPrint($1);": {
+		"prefix": "db",
+		"body": [
+			"debugPrint($1);",
+			"$0",
+		],
+	},
+
+	"Use this for unordered map if needed": {
+		"prefix": "cum",
+		"body": [
+			"// https://codeforces.com/blog/entry/62393",
+			"struct custom_hash {",
+			"  static uint64_t splitmix64(uint64_t x) {",
+			"    // http://xorshift.di.unimi.it/splitmix64.c",
+			"    x += 0x9e3779b97f4a7c15;",
+			"    x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;",
+			"    x = (x ^ (x >> 27)) * 0x94d049bb133111eb;",
+			"    return x ^ (x >> 31);",
+			"  }",
+			"",
+			"  size_t operator()(uint64_t x) const {",
+			"    static const uint64_t FIXED_RANDOM =",
+			"        chrono::steady_clock::now().time_since_epoch().count();",
+			"    return splitmix64(x + FIXED_RANDOM);",
+			"  }",
+			"};",
+			"",
+			"#define umii unordered_map<int, int, custom_hash>",
+			"#define ghtii gp_hash_table<int, int, custom_hash>",
+			"#define boost(a)           \\",
+			"  a.max_load_factor(0.25); \\",
+			"  a.reserve(1 << 20);",
+			"$0",
+		],
+	},
+
+	"print code with line number": {
+		"prefix": "cdbl",
+		"body": [
+			"#define debugPrintLine(x) cerr << __LINE__ << \": \" << #x << \" = \" << (x) << endl",
+			"$0",
+		],
+	},
+
+	"debugPrintLine($1);": {
+		"prefix": "dbl",
+		"body": [
+			"debugPrintLine($1);",
+			"$0",
+		],
+	},
+
+	"traverse forward macro": {
+		"prefix": "ctr",
+		"body": [
+			"#define tr(container, it) \\",
+			"  for (auto it = container.begin(); it != container.end(); it++)",
+			"$0",
+		],
+	},
+
+	"traverse forward": {
+		"prefix": "tr",
+		"body": [
+			"tr($1, it) {",
+			"  $0",
+			"}",
+		],
+	},
+
+	"traverse backward macro": {
+		"prefix": "ctrr",
+		"body": [
+			"#define trr(container, it) \\",
+			"  for (auto it = container.rbegin(); it != container.rend(); it++)",
+			"$0",
+		],
+	},
+
+	"traverse backward": {
+		"prefix": "trr",
+		"body": [
+			"trr($1, it) {",
+			"  $0",
+			"}",
+		],
+	},
+
+
+	/***************************************/
+	//         Map Related
+	/***************************************/
+
+	"map<char, bool> $1;": {
+		"prefix": "mcb",
+		"body": [
+			"map<char, bool> $1;",
+			"$0",
+		],
+	},
+
+	"map<int, bool> $1;": {
+		"prefix": "mib",
+		"body": [
+			"map<int, bool> $1;",
+			"$0",
+		],
+	},
+
+	"map<string, bool> $1;": {
+		"prefix": "msb",
+		"body": [
+			"map<string, bool> $1;",
+			"$0",
+		],
+	},
+
+	"map<char, int> $1;": {
+		"prefix": "mci",
+		"body": [
+			"map<char, int> $1;",
+			"$0",
+		],
+	},
+
+	"map<int, char> $1;": {
+		"prefix": "mic",
+		"body": [
+			"map<int, char> $1;",
+			"$0",
+		],
+	},
+
+	"map<int, int> $1;": {
+		"prefix": "mii",
+		"body": [
+			"map<int, int> $1;",
+			"$0",
+		],
+	},
+
+	"map<int, string> $1;": {
+		"prefix": "mis",
+		"body": [
+			"map<int, string> $1;",
+			"$0",
+		],
+	},
+
+	"map<string, int> $1;": {
+		"prefix": "msi",
+		"body": [
+			"map<string, int> $1;",
+			"$0",
+		],
+	},
+
+	"map<string, string> $1;": {
+		"prefix": "mss",
+		"body": [
+			"map<string, string> $1;",
+			"$0",
+		],
+	},
+
+	"map of type1 and type2": {
+		"prefix": "mtt",
+		"body": [
+			"map<$1, $2> $3;",
+			"$0",
+		],
+	},
+
+
+	/*************************************/
+	//           Output related
+	/*************************************/
+
+	"Create a function which will print vector": {
+		"prefix": "cpa",
+		"body": [
+			"inline void printArray(vector<${1:int}> n, string separator = \" \") {",
+			"  if (n.size() == 0) return;",
+			"  rep(i, 0, n.size() - 1) cout << n[i] << separator;",
+			"  cout << n[n.size() - 1] << endl;",
+			"}",
+			"$0",
+		],
+	},
+
+	"printArray($1);": {
+		"prefix": "pa",
+		"body": [
+			"printArray($1);",
+			"$0",
+		],
+	},
+
+	"cout << $1 << endl;": {
+		"prefix": "pv",
+		"body": [
+			"cout << $1 << endl;",
+			"$0",
+		],
+	},
+
+	"cout << \"$1\" << endl;": {
+		"prefix": "pl",
+		"body": [
+			"cout << \"$1\" << endl;",
+			"$0",
+		],
+	},
+
+	"cout << \"YES\" << endl;": {
+		"prefix": "yes",
+		"body": [
+			"cout << \"YES\" << endl;",
+			"$0",
+		],
+	},
+
+	"cout << \"NO\" << endl;": {
+		"prefix": "no",
+		"body": [
+			"cout << \"NO\" << endl;",
+			"$0",
+		],
+	},
+
+	"printf(\"$1\", $2);": {
+		"prefix": "pf",
+		"body": [
+			"printf(\"$1\", $2);",
+			"$0",
+		],
+	},
+
+
+	/***************************************/
+	//         Variable Declaration
+	/***************************************/
+
+	"pair<int, int> $1;": {
+		"prefix": "pii",
+		"body": [
+			"pair<int, int> $1;",
+			"$0",
+		],
+	},
+
+	"pair<string, int> $1;": {
+		"prefix": "psi",
+		"body": [
+			"pair<string, int> $1;",
+			"$0",
+		],
+	},
+
+	"pair<int, string> $1;": {
+		"prefix": "pis",
+		"body": [
+			"pair<int, string> $1;",
+			"$0",
+		],
+	},
+
+	"pair<string, string> $1;": {
+		"prefix": "pss",
+		"body": [
+			"pair<string, string> $1;",
+			"$0",
+		],
+	},
+
+	"pair of type1 and type2": {
+		"prefix": "ptt",
+		"body": [
+			"pair<$1, $2> $3;",
+			"$0",
+		],
+	},
+
+
+	/***************************************/
+	//         Set Related
+	/***************************************/
+
+	"set<bool> $1;": {
+		"prefix": "sb",
+		"body": [
+			"set<bool> $1;",
+			"$0",
+		],
+	},
+
+	"set<char> $1;": {
+		"prefix": "sc",
+		"body": [
+			"set<char> $1;",
+			"$0",
+		],
+	},
+
+	"set<int> $1;": {
+		"prefix": "si",
+		"body": [
+			"set<int> $1;",
+			"$0",
+		],
+	},
+
+	"set<long long> $1;": {
+		"prefix": "sll",
+		"body": [
+			"set<long long> $1;",
+			"$0",
+		],
+	},
+
+	"set<double> $1;": {
+		"prefix": "sd",
+		"body": [
+			"set<double> $1;",
+			"$0",
+		],
+	},
+
+	"set<long double> $1;": {
+		"prefix": "sld",
+		"body": [
+			"set<long double> $1;",
+			"$0",
+		],
+	},
+
+	"set<string> $1;": {
+		"prefix": "ss",
+		"body": [
+			"set<string> $1;",
+			"$0",
+		],
+	},
+
+	"set<pair<int, int>> $1;": {
+		"prefix": "sii",
+		"body": [
+			"set<pair<int, int>> $1;",
+			"$0",
+		],
+	},
+
+	"set<vector<int>> $1;": {
+		"prefix": "svi",
+		"body": [
+			"set<vector<int>> $1;",
+			"$0",
+		],
+	},
+
+	"set<set<int>> $1;": {
+		"prefix": "ssi",
+		"body": [
+			"set<set<int>> $1;",
+			"$0",
+		],
+	},
+
+	"set of type": {
+		"prefix": "st",
+		"body": [
+			"set<$1> $2;",
+			"$0",
+		],
+	},
+
+
+	/***************************************/
+	//         Vector Related
+	/***************************************/
+
+	"vector<bool> $1;": {
+		"prefix": "vb",
+		"body": [
+			"vector<bool> $1;",
+			"$0",
+		],
+	},
+
+	"vector<char> $1;": {
+		"prefix": "vc",
+		"body": [
+			"vector<char> $1;",
+			"$0",
+		],
+	},
+
+	"vector<int> $1;": {
+		"prefix": "vi",
+		"body": [
+			"vector<int> $1;",
+			"$0",
+		],
+	},
+
+	"vector<long long> $1;": {
+		"prefix": "vll",
+		"body": [
+			"vector<long long> $1;",
+			"$0",
+		],
+	},
+
+	"vector<double> $1;": {
+		"prefix": "vd",
+		"body": [
+			"vector<double> $1;",
+			"$0",
+		],
+	},
+
+	"vector<long double> $1;": {
+		"prefix": "vld",
+		"body": [
+			"vector<long double> $1;",
+			"$0",
+		],
+	},
+
+	"vector<string> $1;": {
+		"prefix": "vs",
+		"body": [
+			"vector<string> $1;",
+			"$0",
+		],
+	},
+
+	"vector<pair<int, int>> $1;": {
+		"prefix": "vii",
+		"body": [
+			"vector<pair<int, int>> $1;",
+			"$0",
+		],
+	},
+
+	"vector<vector<int>> $1;": {
+		"prefix": "vvi",
+		"body": [
+			"vector<vector<int>> $1;",
+			"$0",
+		],
+	},
+
+	"vector of type": {
+		"prefix": "vt",
+		"body": [
+			"vector<$1> $2;",
+			"$0",
+		],
+	},
+
+}

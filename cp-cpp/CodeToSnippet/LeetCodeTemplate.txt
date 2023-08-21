@@ -1,0 +1,31 @@
+/***************************************/
+//         New LeetCode Cpp File
+/***************************************/
+
+lc: New LeetCode Cpp File
+-------------------------
+#include <bits/stdc++.h>
+using namespace std;
+
+#define var auto
+#define endl '\\n'
+
+#define sz(v) ((int)((v).size()))
+#define all(v) ((v).begin()), ((v).end())
+#define fill(v, c) memset(v, c, sizeof(v))
+
+#define rep(i, a, b) for (auto i = (a); i < (b); ++i)
+
+class Solution {
+public:
+  int solve() {
+    return 0;
+  }  
+};
+
+int main() {
+  //var ans = Solution().solve();
+  return 0;
+}
+
+.

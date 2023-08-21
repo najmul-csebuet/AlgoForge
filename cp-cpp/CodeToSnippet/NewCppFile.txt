@@ -1,0 +1,38 @@
+/***************************************/
+//         New Cpp File
+/***************************************/
+
+nf: new cpp file
+----------------
+#include <bits/stdc++.h>
+using namespace std;
+
+#define var auto
+#define endl '\\n'
+
+#define sz(v) ((int)((v).size()))
+#define all(v) ((v).begin()), ((v).end())
+#define fill(v, c) memset(v, c, sizeof(v))
+
+#define rep(i, a, b) for (auto i = (a); i < (b); ++i)
+
+class Solution {
+public:
+  int solve() {
+    return 0;
+  }  
+};
+
+int main() {
+  ios_base::sync_with_stdio(false);
+  cin.tie(0);
+  int testCount = 1;
+  // testCount = io.nextInt();
+  while (testCount > 0) {
+    var ans = Solution().solve();
+    --testCount;
+  }
+  return 0;
+}
+
+.

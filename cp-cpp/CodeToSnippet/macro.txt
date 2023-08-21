@@ -1,0 +1,89 @@
+/*************************************/
+//          Useful macro related
+/*************************************/
+
+cdb: Useful debugging function to print some variables
+-----------------------------------------------------
+#define debugPrint(args...)                       \\
+  {                                          \\
+    string _s = #args;                       \\
+    replace(_s.begin(), _s.end(), ',', ' '); \\
+    stringstream _ss(_s);                    \\
+    istream_iterator<string> _it(_ss);       \\
+    err(_it, args);                          \\
+  }
+
+void err(istream_iterator<string> it) {}
+
+template <typename T, typename... Args>
+void err(istream_iterator<string> it, T a, Args... args) {
+  cerr << *it << \" = \" << a << endl;
+  err(++it, args...);
+}
+$0
+.
+
+db: debugPrint($1);
+
+cum: Use this for unordered map if needed
+-------------------------------------------------
+// https://codeforces.com/blog/entry/62393
+struct custom_hash {
+  static uint64_t splitmix64(uint64_t x) {
+    // http://xorshift.di.unimi.it/splitmix64.c
+    x += 0x9e3779b97f4a7c15;
+    x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;
+    x = (x ^ (x >> 27)) * 0x94d049bb133111eb;
+    return x ^ (x >> 31);
+  }
+
+  size_t operator()(uint64_t x) const {
+    static const uint64_t FIXED_RANDOM =
+        chrono::steady_clock::now().time_since_epoch().count();
+    return splitmix64(x + FIXED_RANDOM);
+  }
+};
+
+#define umii unordered_map<int, int, custom_hash>
+#define ghtii gp_hash_table<int, int, custom_hash>
+#define boost(a)           \\
+  a.max_load_factor(0.25); \\
+  a.reserve(1 << 20);
+$0
+.
+
+cdbl: print code with line number
+-------------------------------
+#define debugPrintLine(x) cerr << __LINE__ << \": \" << #x << \" = \" << (x) << endl
+$0
+.
+
+dbl: debugPrintLine($1);
+
+ctr: traverse forward macro
+---------------------------------
+#define tr(container, it) \\
+  for (auto it = container.begin(); it != container.end(); it++)
+$0
+.
+
+tr: traverse forward
+--------------------
+tr($1, it) {
+  $0
+}
+.
+
+ctrr: traverse backward macro
+---------------------------------
+#define trr(container, it) \\
+  for (auto it = container.rbegin(); it != container.rend(); it++)
+$0
+.
+
+trr: traverse backward
+--------------------
+trr($1, it) {
+  $0
+}
+.
