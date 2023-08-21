@@ -3,4 +3,5 @@
 /*************************************/
 
 vi: vector<int> $1;
+vb: vector<bool> $1
 vvc: vector<vector<char>> $1;

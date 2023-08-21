@@ -273,6 +273,13 @@
 		],
 	},
 
+	"vector<bool> $1": {
+		"prefix": "vb",
+		"body": [
+			"vector<bool> $1",
+		],
+	},
+
 	"vector<vector<char>> $1;": {
 		"prefix": "vvc",
 		"body": [

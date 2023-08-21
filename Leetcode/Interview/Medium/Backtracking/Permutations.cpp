@@ -15,18 +15,29 @@ using namespace std;
 #define tr(c, a) for (var & a : c)
 
 class Solution {
-  void permuteRecursive(vi& nums, vi& flag, vvi& ans) {
-    rep(i, 0, sz(nums)) {
-        if(flag[i]) continue;
+  void permuteRecursive(vi& nums, vector<bool>& flag, vvi& ans, vi& perm) {
+    if (sz(perm) == sz(nums)) {
+      ans.push_back(perm);
+      return;
+    }
 
-        // take ith item
+    rep(i, 0, sz(nums)) {
+      if (flag[i]) continue;
+      // take ith item
+      perm.pb(nums[i]);
+      flag[i] = true;
+      permuteRecursive(nums, flag, ans, perm);
+      flag[i] = false;
+      perm.pop_back();
     }
   }
+
  public:
   vvi permute(vi& nums) {
-    vi flag(sz(nums));
+    vector<bool> flag(sz(nums));
     vvi ans;
-    permuteRecursive(nums, flag, ans);
+    vi perm;
+    permuteRecursive(nums, flag, ans, perm);
     return ans;
   }
 };
