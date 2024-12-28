@@ -4,17 +4,17 @@ public class FindingMaximumValue {
     public static void main(String[] args) {
         // first increasing and then decreasing
         /*
-              -  <--- find this index which contains max value
-             - -
-            -   -
-        */
-        int[] values = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 60, 50, 35, 25, 15, 7};
+         * - <--- find this index which contains max value
+         * - -
+         * - -
+         */
+        int[] values = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 60, 50, 35, 25, 15, 7 };
         tryRegularBinarySearch(values);
 
-        int[] values1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 60};
+        int[] values1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 60 };
         tryRegularBinarySearch(values1);
 
-        int[] values2 = {60, 50, 35, 25, 15, 7};
+        int[] values2 = { 60, 50, 35, 25, 15, 7 };
         tryRegularBinarySearch(values2);
 
         tryJumpingBinarySearch(values);
@@ -23,7 +23,7 @@ public class FindingMaximumValue {
     private static void tryJumpingBinarySearch(int[] values) {
         // if it is increasing, then continue jumping
         // stop when you see that seq is decreasing
-        int base = 0;
+        // int base = 0;
     }
 
     private static void tryRegularBinarySearch(int[] values) {

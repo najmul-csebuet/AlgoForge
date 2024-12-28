@@ -1,6 +1,6 @@
 package AlgorithmPractice.BinarySearch;
 
-import java.util.Arrays;
+// import java.util.Arrays;
 
 public class FindSmallestValidSolution {
     public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class FindSmallestValidSolution {
 
     private static void findSmallestValidSolution() {
         // find the smallest index where values[k] == true
-        boolean[] values = {false, false, false, true, true, true, true};
+        boolean[] values = { false, false, false, true, true, true, true };
         // Hint: find first true or last false
 
         findFirstTrueIndex(values);
@@ -22,12 +22,12 @@ public class FindSmallestValidSolution {
     private static void useJumping(boolean[] values) {
         int base = -1;
         for (int jump = values.length - 1; jump >= 1; jump /= 2) {
-            while(base + jump < values.length && !values[base + jump]) {
+            while (base + jump < values.length && !values[base + jump]) {
                 base += jump;
             }
         }
 
-        if(values[base + 1]) {
+        if (values[base + 1]) {
             System.out.println("Smallest valid solution is at index: " + (base + 1));
         } else {
             System.out.println("Seems no solution.");
