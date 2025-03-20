@@ -4,21 +4,22 @@
 using namespace std;
 
 using vi = vector<int>;
-using vs = vector<string>;
 
 #define sz(x) ((int)(x).size())
 #define rep(i, a, b) for (int i = a; i < b; i++)
 
-void solution() {}
+void solution() {
+  // write your code here
+}
 
 int main() {
-  int t = 1;
 #ifdef LOCAL
   freopen("in.txt", "r", stdin);
   freopen("out.txt", "w", stdout);
-  cin >> t;
 #endif
 
+  int t = 1;
+  // cin >> t;
   while (t--) {
     solution();
   }
