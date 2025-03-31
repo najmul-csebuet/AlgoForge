@@ -18,12 +18,9 @@ class Solution {
   int removeDuplicates(vi& nums) {
     var last = 0;
     rep(current, 1, sz(nums)) {
-      if (nums[last] == nums[current]) {
-        // if same, continue
-        continue;
+      if (nums[last] != nums[current]) {
+        nums[++last] = nums[current];
       }
-      // larger found, so save
-      nums[++last] = nums[current];
     }
     return last + 1;
   }
