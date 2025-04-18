@@ -11,9 +11,9 @@
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
-                "&&",
-                "python3",
-                "${workspaceFolder}/compare_files.py"
+                // "&&",
+                // "python3",
+                // "${workspaceFolder}/compare_files.py"
             ],
             "options": {
                 "cwd": "${fileDirname}"
